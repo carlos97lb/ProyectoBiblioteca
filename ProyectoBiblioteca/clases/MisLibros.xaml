@@ -1,0 +1,25 @@
+﻿<Window x:Class="ProyectoBiblioteca.clases.MisLibros"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProyectoBiblioteca.clases" xmlns:dto="clr-namespace:ProyectoBiblioteca.dto" d:DataContext="{d:DesignInstance Type=dto:Libro}"
+        mc:Ignorable="d"
+        Title="MisLibros" Height="450" Width="800">
+    <Grid>
+        <DataGrid x:Name="datagridLibros" ItemsSource="{Binding Path=listademislibros}" AutoGenerateColumns="False" Margin="0,20,0,0" HorizontalAlignment="Center" Width="800" Height="231" VerticalAlignment="Top" SelectionChanged="DataGrid_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Autor" Binding="{Binding Path=Autor}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Titulo" Binding="{Binding Path=Titulo}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Center" Height="189" Margin="0,245,0,0" Stroke="Black" VerticalAlignment="Top" Width="800"/>
+        <Button x:Name="ButtonVolver" Content="VOLVER" HorizontalAlignment="Left" Margin="68,320,0,0" VerticalAlignment="Top" Width="235" Height="44" Click="ButtonVolver_Click"/>
+        <Menu HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="792">
+            <MenuItem Header="Archivo" Height="20" Width="184" Click="MenuItem_Click">
+                <MenuItem x:Name="nuevomenuitem" Header="añadir" HorizontalAlignment="Left" Height="29" Width="143" Margin="-2,0,-3,0"/>
+            </MenuItem>
+        </Menu>
+        <Button x:Name="BotonModificar" Content="MODIFICAR" HorizontalAlignment="Left" Margin="508,320,0,0" VerticalAlignment="Top" Width="199" Height="42" Click="BotonModificar_Click"/>
+    </Grid>
+</Window>

@@ -1,0 +1,15 @@
+﻿<Window x:Class="ProyectoBiblioteca.clases.Lenguaje"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProyectoBiblioteca.clases"
+        mc:Ignorable="d"
+        Title="Lenguaje" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="ButtonVolver" Content="VOLVER" HorizontalAlignment="Left" Margin="285,32,0,0" VerticalAlignment="Top" Width="242" Height="67" Click="ButtonVolver_Click"/>
+        <ComboBox x:Name="comboboxidioma" HorizontalAlignment="Left" Margin="426,195,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="1.292,0.62" SelectionChanged="comboboxidioma_SelectionChanged"/>
+        <Label Content="Seleccione su lenguaje:" HorizontalAlignment="Left" Margin="251,191,0,0" VerticalAlignment="Top" Width="151"/>
+
+    </Grid>
+</Window>
